@@ -46,6 +46,7 @@ public class HywirlController : MonoBehaviour
         if (targetIndex != currentTargetIndex)
         {
             // pathProgress = 0f; // Reset progress when we change targets
+            pathProgress = 1 - pathProgress;
             currentTargetIndex = targetIndex;
         }
 
