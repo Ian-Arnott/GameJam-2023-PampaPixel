@@ -5,6 +5,7 @@ using UnityEngine;
 public class Character : MonoBehaviour
 {
     private MovementController _movementController;
+    private Animator _animator;
     private Rigidbody _rb;
     // BINDING ATTACK KEYS
 
@@ -32,9 +33,10 @@ public class Character : MonoBehaviour
     {
         _movementController = GetComponent<MovementController>();
         _rb = GetComponent<Rigidbody>();
+        _animator = GetComponent<Animator>();
 
-        _cmdMovementForward = new CmdMovement(_movementController, transform.forward);
-        _cmdMovementBack = new CmdMovement(_movementController, -transform.forward);
+        _cmdMovementForward = new CmdMovement(_animator,_movementController, transform.forward);
+        _cmdMovementBack = new CmdMovement(_animator,_movementController, -transform.forward);
         _cmdJump = new CmdJump(_movementController,_rb);
         // _cmdApplyDamage = new CmdApplyDamage(GetComponent<IDamagable>(), 5);
     }
@@ -43,9 +45,9 @@ public class Character : MonoBehaviour
     void Update()
     {
         if (Input.GetKey(_moveForward)) EventQueueManager.instance.AddEvent(_cmdMovementForward);
-        if (Input.GetKey(_moveBack)) EventQueueManager.instance.AddEvent(_cmdMovementBack);
-        if (Input.GetKey(_jump)) EventQueueManager.instance.AddEvent(_cmdJump);
-
+        else if (Input.GetKey(_moveBack)) EventQueueManager.instance.AddEvent(_cmdMovementBack);
+        else if (Input.GetKey(_jump)) EventQueueManager.instance.AddEvent(_cmdJump);
+        else _animator.SetBool("isWalking", false);
         // /* Gameover Test */
         // if (Input.GetKeyDown(KeyCode.Return)) EventManager.instance.EventGameOver(true);
         // /* Lifebar Test */

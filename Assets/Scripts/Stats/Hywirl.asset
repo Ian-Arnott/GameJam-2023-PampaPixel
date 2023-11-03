@@ -15,4 +15,4 @@ MonoBehaviour:
   _statValues:
     MaxLife: 100
     MovementSpeed: 4
-    JumpForce: 35
+    JumpForce: 200

@@ -11,8 +11,9 @@ public class MovementController : MonoBehaviour, IMoveable, IJumpable
     #endregion
 
     #region IMOVEABLE_METHODS
-    public void Move(Vector3 direction)
+    public void Move(Animator animator, Vector3 direction)
     {
+        animator.SetBool("isWalking",true);
         transform.position += direction * Time.deltaTime * Speed;
     }
     #endregion
@@ -20,8 +21,12 @@ public class MovementController : MonoBehaviour, IMoveable, IJumpable
     #region IJUMPABLE_METHODS
     public void Jump(Rigidbody rb)
     {
-        Debug.Log("Hola");
-        rb.AddForce(Vector3.up * Force);
+        if (IsGrounded(rb)) rb.AddForce(Vector3.up * Force);
     }
     #endregion
+
+    public bool IsGrounded(Rigidbody rb) {
+       return rb.velocity.y == 0;
+    }
+
 }
