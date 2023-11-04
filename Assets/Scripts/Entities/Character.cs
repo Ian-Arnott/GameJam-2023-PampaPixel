@@ -11,6 +11,7 @@ public class Character : MonoBehaviour
     private Animator _animator;
     private CharacterController _characterController;
     private Vector3 _velocity;
+    private bool _isTwist;
     [SerializeField]
     private GameObject _target;
     private int _damage; 
@@ -21,7 +22,7 @@ public class Character : MonoBehaviour
     [SerializeField] private KeyCode _attack = KeyCode.Mouse0;
 
     // TWIST KEY
-    // [SerializeField] private KeyCode _twist = KeyCode.T;
+    [SerializeField] private KeyCode _twist = KeyCode.T;
 
 
     #region COMMANDS
@@ -36,6 +37,7 @@ public class Character : MonoBehaviour
         _characterController = GetComponent<CharacterController>();
         _animator = GetComponent<Animator>();
         _damage = Damage;
+        _isTwist = false;
 
         _cmdMovementForward = new CmdMovement(_animator,_movementController, transform.forward);
         _cmdMovementBack = new CmdMovement(_animator,_movementController, -transform.forward);
@@ -49,18 +51,20 @@ public class Character : MonoBehaviour
             _velocity.y = 0f;
         }
 
+        if (Input.GetKeyDown(_twist)) {
+            _isTwist = !_isTwist;
+            EventManager.instance.EventTwist(_isTwist);
+        }
         if (Input.GetKey(_moveForward)) EventQueueManager.instance.AddEvent(_cmdMovementForward);
         if (Input.GetKey(_moveBack)) EventQueueManager.instance.AddEvent(_cmdMovementBack);
-        if (Input.GetKey(_jump)) EventQueueManager.instance.AddEvent(_cmdJump);
-        if (Input.GetKeyDown(_attack)) {
+        if (Input.GetKey(_jump) && _isTwist) EventQueueManager.instance.AddEvent(_cmdJump);
+        if (Input.GetKeyDown(_attack) && _isTwist) {
             EventQueueManager.instance.AddEvent(new CmdAttack(_animator));
             EventQueueManager.instance.AddEvent(new CmdApplyDamage(_target.GetComponent<IDamagable>(), _damage));
         }
         if (_characterController.velocity.z == 0) {
             _animator.SetBool("isWalking",false);
         }
-        // /* Gameover Test */
-        // if (Input.GetKeyDown(KeyCode.Return)) EventManager.instance.EventGameOver(true);
         _velocity.y += -10f * Time.deltaTime;
         _characterController.Move(_velocity * Time.deltaTime);
     }
