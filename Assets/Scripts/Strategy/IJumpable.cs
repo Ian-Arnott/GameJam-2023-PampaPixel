@@ -5,5 +5,5 @@ using UnityEngine;
 public interface IJumpable
 {
     float Force { get; }
-    void Jump(Rigidbody rb);
+    void Jump(CharacterController cc);
 }

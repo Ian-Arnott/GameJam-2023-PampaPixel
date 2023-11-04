@@ -19,14 +19,10 @@ public class MovementController : MonoBehaviour, IMoveable, IJumpable
     #endregion
 
     #region IJUMPABLE_METHODS
-    public void Jump(Rigidbody rb)
+    public void Jump(CharacterController cc)
     {
-        if (IsGrounded(rb)) rb.AddForce(Vector3.up * Force);
+        if (cc.isGrounded) cc.Move(Vector3.up * Force);
     }
     #endregion
-
-    public bool IsGrounded(Rigidbody rb) {
-       return rb.velocity.y == 0;
-    }
 
 }
