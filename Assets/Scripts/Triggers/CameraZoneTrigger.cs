@@ -9,4 +9,9 @@ public class CameraZoneTrigger : MonoBehaviour
         if (other.tag == "Player") _zone.SetActive(false);
 
     }
+
+    public void OnTriggerEnter(Collider other){
+        if (other.tag == "Player") _zone.SetActive(true);
+
+    }
 }
