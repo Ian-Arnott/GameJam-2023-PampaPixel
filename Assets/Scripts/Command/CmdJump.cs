@@ -5,13 +5,13 @@ using UnityEngine;
 public class CmdJump : ICommand
 {
     private IJumpable _jumpable;
-    private Rigidbody _rb;
+    private CharacterController _cc;
 
-    public CmdJump(IJumpable jumpable, Rigidbody rb)
+    public CmdJump(IJumpable jumpable, CharacterController cc)
     {
         _jumpable = jumpable;
-        _rb = rb;
+        _cc = cc;
     }
 
-    public void Execute() => _jumpable.Jump(_rb);
+    public void Execute() => _jumpable.Jump(_cc);
 }
