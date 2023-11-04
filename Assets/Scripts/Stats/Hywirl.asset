@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Hywirl
   m_EditorClassIdentifier: 
   _statValues:
-    MaxLife: 100
+    MaxLife: 1000
+    Damage: 10
     MovementSpeed: 4
     JumpForce: 200

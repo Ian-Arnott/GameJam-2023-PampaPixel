@@ -8,6 +8,7 @@ public class ActorStats : ScriptableObject
     [SerializeField] private StatValues _statValues;
 
     public int MaxLife => _statValues.MaxLife;
+    public int Damage => _statValues.Damage;
     public float MovementSpeed => _statValues.MovementSpeed;
     public float JumpForce => _statValues.JumpForce;
 }
@@ -16,6 +17,7 @@ public class ActorStats : ScriptableObject
 public struct StatValues
 {
     public int MaxLife;
+    public int Damage;
     public float MovementSpeed;
     public float JumpForce;
 }

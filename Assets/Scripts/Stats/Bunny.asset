@@ -14,5 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _statValues:
     MaxLife: 100
+    Damage: 5
     MovementSpeed: 5
     JumpForce: 0
