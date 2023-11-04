@@ -210,8 +210,8 @@ ModelImporter:
       name: CharacterArmature|Punch
       takeName: CharacterArmature|Punch
       internalID: -4592842328519117816
-      firstFrame: 0
-      lastFrame: 30
+      firstFrame: 0.9
+      lastFrame: 23.1
       wrapMode: 0
       orientationOffsetY: 0
       level: 0

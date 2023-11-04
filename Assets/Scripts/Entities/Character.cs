@@ -2,10 +2,14 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 [RequireComponent(typeof(Actor))]
 public class Character : MonoBehaviour
 {
+    private float _twistCooldown;
+    private float _twistDuration;
+    private float _attackCooldown;
     public int Damage => GetComponent<Actor>().Stats.Damage;
     private MovementController _movementController;
     private Animator _animator;
@@ -14,7 +18,10 @@ public class Character : MonoBehaviour
     private bool _isTwist;
     [SerializeField]
     private GameObject _target;
-    private int _damage; 
+    private int _damage;
+
+    [SerializeField] private GameObject _raycast;
+    [SerializeField] private float _attackRange;
     // BINDING MOVEMENT KEYS
     [SerializeField] private KeyCode _moveForward = KeyCode.D;
     [SerializeField] private KeyCode _moveBack = KeyCode.A;
@@ -38,6 +45,9 @@ public class Character : MonoBehaviour
         _animator = GetComponent<Animator>();
         _damage = Damage;
         _isTwist = false;
+        _attackCooldown = 0;
+        _twistCooldown = 0;
+        _twistDuration = 0;
 
         _cmdMovementForward = new CmdMovement(_animator,_movementController, transform.forward);
         _cmdMovementBack = new CmdMovement(_animator,_movementController, -transform.forward);
@@ -46,21 +56,62 @@ public class Character : MonoBehaviour
 
     void Update()
     {
+
+        if (_attackCooldown < 0) { _attackCooldown = 0; } else if(_attackCooldown > 0) {  _attackCooldown -= Time.deltaTime;}
+        
+        if (_twistCooldown < 0) { _twistCooldown = 0; } else if (_twistCooldown > 0) { _twistCooldown -= Time.deltaTime; }
+
+        if (_twistDuration < 0) { _isTwist = false; EventManager.instance.EventTwist(_isTwist); _twistDuration = 0; } else if(_twistDuration > 0) { _twistDuration -= Time.deltaTime; }
+
         if (_characterController.isGrounded && _velocity.y < 0)
         {
             _velocity.y = 0f;
         }
 
         if (Input.GetKeyDown(_twist)) {
-            _isTwist = !_isTwist;
-            EventManager.instance.EventTwist(_isTwist);
+            if (_twistCooldown <= 0)
+            {
+                _twistDuration = 4;
+                _twistCooldown = 6;
+                _isTwist = !_isTwist;
+                EventManager.instance.EventTwist(_isTwist);
+            }
         }
+
         if (Input.GetKey(_moveForward)) EventQueueManager.instance.AddEvent(_cmdMovementForward);
+
         if (Input.GetKey(_moveBack)) EventQueueManager.instance.AddEvent(_cmdMovementBack);
+
         if (Input.GetKey(_jump) && _isTwist) EventQueueManager.instance.AddEvent(_cmdJump);
+
+        Debug.DrawRay(_raycast.transform.position, _raycast.transform.forward * _attackRange);
         if (Input.GetKeyDown(_attack) && _isTwist) {
-            EventQueueManager.instance.AddEvent(new CmdAttack(_animator));
-            EventQueueManager.instance.AddEvent(new CmdApplyDamage(_target.GetComponent<IDamagable>(), _damage));
+            if (_attackCooldown <= 0)
+            {
+                _attackCooldown = 0.7f;
+                EventQueueManager.instance.AddEvent(new CmdAttack(_animator));
+                RaycastHit hit;
+
+                if (Physics.Raycast(_raycast.transform.position, _raycast.transform.forward, out hit, _attackRange))
+                {
+
+                    
+                    bool isEnemy = hit.transform.tag == "Enemy";
+                    Debug.Log(isEnemy);
+                    if (isEnemy)
+                    {
+                        IDamagable damagable = hit.collider.transform.GetComponent<IDamagable>();
+                        if (damagable != null)
+                        {
+                            EventQueueManager.instance.AddEvent(new CmdApplyDamage(damagable, _damage));
+                        }
+                        //EventQueueManager.instance.AddEvent(new CmdApplyDamage(_target.GetComponent<IDamagable>(), _damage));
+                    }
+
+                }
+            }
+                
+            
         }
         if (_characterController.velocity.z == 0) {
             _animator.SetBool("isWalking",false);

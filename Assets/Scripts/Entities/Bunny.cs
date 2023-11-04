@@ -6,6 +6,9 @@ using UnityEngine.AI;
 [RequireComponent(typeof(Actor))]
 public class Bunny : MonoBehaviour
 {
+
+    private float _attackCooldown;
+
     public int Damage => GetComponent<Actor>().Stats.Damage;
     private Animator _animator;
     private EnemyMovementController _enemyMovementController;
@@ -25,6 +28,7 @@ public class Bunny : MonoBehaviour
         _isTwist = false;
         _damage = Damage;
         EventManager.instance.OnTwist += Twist;
+        _attackCooldown = 0;
     }
 
     void Twist(bool isTwist) {
@@ -35,18 +39,28 @@ public class Bunny : MonoBehaviour
     void Update()
     {
         float distanceToTarget = Vector3.Distance(_target.transform.position, transform.position);
+        if (_attackCooldown < 0) { _attackCooldown = 0; } else if( _attackCooldown > 0) { _attackCooldown -= Time.deltaTime; }
 
         if (distanceToTarget <= _attackRange && _isTwist)
         {
             _navMeshAgent.isStopped = true;
             _animator.SetBool("isRunning", false);
-            EventQueueManager.instance.AddEvent(new CmdAttack(_animator));
-            if(_animator.GetCurrentAnimatorStateInfo(0).IsName("CharacterArmature|Weapon")) EventQueueManager.instance.AddEvent(new CmdApplyDamage(_target.GetComponent<IDamagable>(), _damage));
+            if (_attackCooldown == 0)
+            {
+                _attackCooldown = 1f;
+                EventQueueManager.instance.AddEvent(new CmdAttack(_animator));
+                EventQueueManager.instance.AddEvent( new CmdApplyDamage(_target.GetComponent<IDamagable>(), _damage));
+            }
+            
         }
         else if (distanceToTarget > _attackRange && _isTwist)
         {
             _navMeshAgent.isStopped = false;
             EventQueueManager.instance.AddEvent(new CmdMovement(_animator,_enemyMovementController,_target.transform.position));
+        }else if (!_isTwist)
+        {
+            _navMeshAgent.isStopped = true;
+            _animator.SetBool("isRunning", false);
         }
 
     }
