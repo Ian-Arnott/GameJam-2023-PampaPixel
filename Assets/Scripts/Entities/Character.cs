@@ -151,9 +151,17 @@ public class Character : MonoBehaviour
             }
         }
 
-        if (Input.GetKey(_moveForward)) EventQueueManager.instance.AddEvent(_cmdMovementForward);
+        if (Input.GetKey(_moveForward)) 
+        { 
+            EventQueueManager.instance.AddEvent(_cmdMovementForward);
+            transform.LookAt(new Vector3(transform.position.x, transform.position.y, transform.position.z+1));
+        }
 
-        if (Input.GetKey(_moveBack)) EventQueueManager.instance.AddEvent(_cmdMovementBack);
+        if (Input.GetKey(_moveBack))
+        {
+            EventQueueManager.instance.AddEvent(_cmdMovementBack);
+            transform.LookAt(new Vector3(transform.position.x, transform.position.y, transform.position.z - 1));
+        }
 
         if (_jumpCooldown > 0)
         {

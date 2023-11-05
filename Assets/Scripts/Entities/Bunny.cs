@@ -18,6 +18,8 @@ public class Bunny : MonoBehaviour
 
     [SerializeField]
     private GameObject _area; // cube where it is
+    [SerializeField] private GameObject _startPoint; // starting position
+    private bool _isHappy;
 
     [SerializeField]
     private GameObject _target;
@@ -42,38 +44,82 @@ public class Bunny : MonoBehaviour
 
     void Update()
     {
-        bool playerInArea = _area.GetComponent<Collider>().bounds.Contains(_target.transform.position);
+        bool atStartPoint = _startPoint.GetComponent<Collider>().bounds.Contains(transform.position);
 
-        if (playerInArea)
+
+
+        if (!_isTwist) 
         {
-            float distanceToTarget = Vector3.Distance(_target.transform.position, transform.position);
-            if (_attackCooldown < 0) { _attackCooldown = 0; } else if (_attackCooldown > 0) { _attackCooldown -= Time.deltaTime; }
-
-            if (distanceToTarget <= _attackRange && _isTwist)
+            if (atStartPoint)
             {
-                _navMeshAgent.isStopped = true;
-                _animator.SetBool("isRunning", false);
-                if (_attackCooldown == 0)
+                // set happy
+                if (!_isHappy)
                 {
-                    _attackCooldown = 1f;
-                    EventQueueManager.instance.AddEventToQueue(new CmdAttack(_animator, _target.GetComponent<IDamagable>(), _damage));
-                    // EventQueueManager.instance.AddEvent( new CmdApplyDamage(_target.GetComponent<IDamagable>(), _damage));
+                    _navMeshAgent.isStopped = true;
+                    _animator.SetBool("isRunning", false);
+                    _animator.SetBool("isHappy", true);
+                    _isHappy = true;
+                }
+                transform.LookAt(_target.transform.position);
+                // transform rotation facing _target.transform.position
+
+            }
+            else
+            {
+                // go to startPoint
+                _animator.SetBool("isHappy", false);
+                _isHappy = false;
+                _navMeshAgent.isStopped = false;
+                EventQueueManager.instance.AddEvent(new CmdMovement(_animator, _enemyMovementController, _startPoint.transform.position));
+
+            }
+        }
+        else
+        {
+            if (_isHappy)
+            {
+                _animator.SetBool("isHappy", false);
+                _isHappy = false;
+            }
+
+            _animator.SetBool("isHappy", false);
+
+            bool playerInArea = _area.GetComponent<Collider>().bounds.Contains(_target.transform.position);
+
+            if (playerInArea)
+            {
+                float distanceToTarget = Vector3.Distance(_target.transform.position, transform.position);
+                if (_attackCooldown < 0) { _attackCooldown = 0; } else if (_attackCooldown > 0) { _attackCooldown -= Time.deltaTime; }
+
+                if (distanceToTarget <= _attackRange && _isTwist)
+                {
+                    _navMeshAgent.isStopped = true;
+                    _animator.SetBool("isRunning", false);
+                    if (_attackCooldown == 0)
+                    {
+                        _attackCooldown = 1f;
+                        EventQueueManager.instance.AddEventToQueue(new CmdAttack(_animator, _target.GetComponent<IDamagable>(), _damage));
+                        // EventQueueManager.instance.AddEvent( new CmdApplyDamage(_target.GetComponent<IDamagable>(), _damage));
+                    }
+
+                }
+                else if (distanceToTarget > _attackRange && _isTwist)
+                {
+                    _navMeshAgent.isStopped = false;
+                    EventQueueManager.instance.AddEvent(new CmdMovement(_animator, _enemyMovementController, _target.transform.position));
+                }
+                else if (!_isTwist)
+                {
+                    _navMeshAgent.isStopped = true;
+                    _animator.SetBool("isRunning", false);
                 }
 
-            }
-            else if (distanceToTarget > _attackRange && _isTwist)
-            {
-                _navMeshAgent.isStopped = false;
-                EventQueueManager.instance.AddEvent(new CmdMovement(_animator, _enemyMovementController, _target.transform.position));
-            }
-            else if (!_isTwist)
-            {
-                _navMeshAgent.isStopped = true;
-                _animator.SetBool("isRunning", false);
-            }
 
-
+            }
         }
+
+
+        
     }
 }
 
