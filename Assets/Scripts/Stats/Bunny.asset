@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Bunny
   m_EditorClassIdentifier: 
   _statValues:
-    MaxLife: 100
+    MaxLife: 1
     Damage: 10
     MovementSpeed: 5
     JumpForce: 0
