@@ -41,18 +41,20 @@ public class GameManager : MonoBehaviour
 
     private void OnGameOver(bool isVictory)
     {
-        _isGameOver = true;
-        _isVictory = isVictory;
+        if (GlobalVictory.instance.isVictory)
+        {
+            Invoke("LoadWin", 1f);        
+        }
+        else {
+            Invoke("LoadLose", 1f);        
+        }
 
-        //_gameoverMessage.text = isVictory ? "Victoria" : "Derrota";
-        //_gameoverMessage.color = isVictory ? Color.cyan : Color.red;
-
-        // Invoke("LoadEndgameScene", 3f);
     }
 
     private void EnterScene()
     {
         _enterScene = true;
     }
-    private void LoadEndgameScene() => SceneManager.LoadScene(2);
+    private void LoadWin() => SceneManager.LoadScene(6);
+    private void LoadLose() => SceneManager.LoadScene(5);
 }

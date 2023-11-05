@@ -10,6 +10,7 @@ using UnityEngine;
         if (other.tag == "Player")
         {
             EventManager.instance.EventObjectivePickup();
+            GlobalVictory.instance.isVictory = true;
             Destroy(this.gameObject);
         }
 
