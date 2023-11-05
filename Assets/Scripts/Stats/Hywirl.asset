@@ -16,4 +16,4 @@ MonoBehaviour:
     MaxLife: 100
     Damage: 50
     MovementSpeed: 15
-    JumpForce: 4
+    JumpForce: 25

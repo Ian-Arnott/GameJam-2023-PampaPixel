@@ -38,7 +38,6 @@ public class Bunny : MonoBehaviour
     void Twist(bool isTwist)
     {
         _isTwist = isTwist;
-        Debug.Log(_isTwist);
     }
 
     void Update()

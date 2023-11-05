@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(Actor))]
@@ -28,8 +27,8 @@ public class MovementController : MonoBehaviour, IMoveable, IJumpable
     #region IJUMPABLE_METHODS
     public void Jump(CharacterController cc)
     {
-        if (cc.isGrounded) cc.Move(Vector3.up * multiplier * Force);
+        //cc.Move(Vector3.up * multiplier * Force);
+        transform.position += Vector3.up * Time.deltaTime * Force * multiplier;
     }
     #endregion
-
 }

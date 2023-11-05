@@ -18,9 +18,23 @@ public class EventManager : MonoBehaviour
     #region GAME_MANAGER
     public event Action<bool> OnGameOver;
     public event Action<bool> OnTwist;
+    public event Action OnObjectivePickup;
+    public event Action onGameOver;
+    public event Action onGameWin;
+
+    public void EventObjectivePickup()
+    {
+        if (OnObjectivePickup != null) OnObjectivePickup();
+    }
+
+    public void EventGameWin()
+    {
+        if (onGameWin != null) onGameWin();
+    }
 
     public void EventGameOver(bool isVictory) 
     {
+        if (isVictory) { Debug.Log("Congratulations! you won!"); }
         if (OnGameOver != null) OnGameOver(isVictory);
     }
 

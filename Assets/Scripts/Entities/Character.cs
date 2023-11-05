@@ -7,21 +7,32 @@ using UnityEngine.EventSystems;
 [RequireComponent(typeof(Actor))]
 public class Character : MonoBehaviour
 {
-    private float _twistCooldown;
-    private float _twistDuration;
-    private float _attackCooldown;
-    public int Damage => GetComponent<Actor>().Stats.Damage;
+    // HAS OBJECTIVE
+    private bool _hasObjective;
+
+
+    // CONTROLLERS
     private MovementController _movementController;
     private Animator _animator;
     private CharacterController _characterController;
     private Vector3 _velocity;
-    private bool _isTwist;
-    [SerializeField]
-    private GameObject _target;
-    private int _damage;
 
+    // TWIST
+    private bool _isTwist;
+
+    // COOLDOWNS
+    private float _twistCooldown;
+    private float _twistDuration;
+    private float _attackCooldown;
+
+    private float _jumpCooldown;
+
+    // ATTACK
+    public int Damage => GetComponent<Actor>().Stats.Damage;
+    private int _damage;
     [SerializeField] private GameObject _raycast;
     [SerializeField] private float _attackRange;
+
     // BINDING MOVEMENT KEYS
     [SerializeField] private KeyCode _moveForward = KeyCode.D;
     [SerializeField] private KeyCode _moveBack = KeyCode.A;
@@ -45,18 +56,51 @@ public class Character : MonoBehaviour
         _animator = GetComponent<Animator>();
         _damage = Damage;
         _isTwist = false;
+        _hasObjective = false;
         _attackCooldown = 0;
         _twistCooldown = 0;
         _twistDuration = 0;
+        _jumpCooldown = 0;
+
+        EventManager.instance.OnObjectivePickup += PickObjective;
+        EventManager.instance.onGameWin += WinGame;
 
         _cmdMovementForward = new CmdMovement(_animator,_movementController, transform.forward);
         _cmdMovementBack = new CmdMovement(_animator,_movementController, -transform.forward);
         _cmdJump = new CmdJump(_movementController,_characterController);
     }
 
+    void WinGame()
+    {
+        if (_hasObjective)
+        {
+            //win game
+            EventManager.instance.EventGameOver(true);
+        }
+        else
+        {
+            //do nothing
+        }
+    }
+
+    void PickObjective()
+    {
+        _hasObjective = true;
+        _isTwist = true;
+        Debug.Log("_hasObjective: " + _hasObjective + " _isTwist: " + _isTwist);
+        EventManager.instance.EventTwist(_isTwist);
+        _movementController.setForceMultiplier(2);
+    }
+
     void Update()
     {
-        if (_characterController.isGrounded) EventManager.instance.CharacterJump(0);
+
+        if (_characterController.isGrounded) { 
+            EventManager.instance.CharacterJump(0);
+            _jumpCooldown = 0;
+        }
+
+        
 
         if (_attackCooldown < 0) { 
             _attackCooldown = 0; 
@@ -78,10 +122,11 @@ public class Character : MonoBehaviour
 
         if (_twistDuration < 0) 
         {
-            _isTwist = false;
+            if (_hasObjective) { _isTwist = true; _movementController.setForceMultiplier(2); } else { _isTwist = false; _movementController.setForceMultiplier(1); }
+
             EventManager.instance.EventTwist(_isTwist);
             _twistDuration = 0;
-            _movementController.setForceMultiplier(1);
+            
         } 
         else if(_twistDuration > 0)
         { 
@@ -96,11 +141,12 @@ public class Character : MonoBehaviour
         if (Input.GetKeyDown(_twist)) {
             if (_twistCooldown <= 0)
             {
+                if (_hasObjective) { _movementController.setForceMultiplier(1); } else { _movementController.setForceMultiplier(2); }
                 _twistDuration = 6;
                 _twistCooldown = 6;
                 EventManager.instance.CharacterTwist(_twistCooldown, 6);
                 _isTwist = !_isTwist;
-                _movementController.setForceMultiplier(2);
+                
                 EventManager.instance.EventTwist(_isTwist);
             }
         }
@@ -109,10 +155,18 @@ public class Character : MonoBehaviour
 
         if (Input.GetKey(_moveBack)) EventQueueManager.instance.AddEvent(_cmdMovementBack);
 
-        if (Input.GetKey(_jump)) { 
+        if (_jumpCooldown > 0)
+        {
+            _jumpCooldown -= Time.deltaTime;
             EventQueueManager.instance.AddEvent(_cmdJump);
+        }
+
+        if (Input.GetKey(_jump) && _characterController.isGrounded && _jumpCooldown<=0)
+        {
+            _jumpCooldown = 5f; // Reset cooldown
             EventManager.instance.CharacterJump(1);
         }
+
 
         Debug.DrawRay(_raycast.transform.position, _raycast.transform.forward * _attackRange);
         if (Input.GetKeyDown(_attack) && _isTwist) {
