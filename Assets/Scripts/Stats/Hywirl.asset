@@ -15,5 +15,5 @@ MonoBehaviour:
   _statValues:
     MaxLife: 100
     Damage: 50
-    MovementSpeed: 30
-    JumpForce: 25
+    MovementSpeed: 10
+    JumpForce: 6
