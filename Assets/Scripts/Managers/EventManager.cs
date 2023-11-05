@@ -40,7 +40,7 @@ public class EventManager : MonoBehaviour
 
     public void EventTwist(bool isTwist) 
     {
-        if (OnGameOver != null) OnTwist(isTwist);
+        if (OnTwist != null) OnTwist(isTwist);
     }
     #endregion
 

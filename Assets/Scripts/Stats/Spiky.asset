@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Spiky
   m_EditorClassIdentifier: 
   _statValues:
-    MaxLife: 50
+    MaxLife: 1
     Damage: 20
     MovementSpeed: 0
     JumpForce: 0
