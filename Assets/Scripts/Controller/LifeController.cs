@@ -46,6 +46,6 @@ public class LifeController : MonoBehaviour, IDamagable
 
     public void UI_Updater() 
     { 
-        // if(name == "Character") EventManager.instance.CharacterLifeChange(_currentLife, MaxLife);
+        if(name == "Hywirl") EventManager.instance.CharacterLifeChange(_currentLife, MaxLife);
     }
 }

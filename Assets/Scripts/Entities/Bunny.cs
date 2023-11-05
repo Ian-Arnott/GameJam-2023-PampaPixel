@@ -49,28 +49,26 @@ public class Bunny : MonoBehaviour
             float distanceToTarget = Vector3.Distance(_target.transform.position, transform.position);
             if (_attackCooldown < 0) { _attackCooldown = 0; } else if (_attackCooldown > 0) { _attackCooldown -= Time.deltaTime; }
 
-            if (distanceToTarget <= _attackRange && _isTwist)
+        if (distanceToTarget <= _attackRange && _isTwist)
+        {
+            _navMeshAgent.isStopped = true;
+            _animator.SetBool("isRunning", false);
+            if (_attackCooldown == 0)
             {
-                _navMeshAgent.isStopped = true;
-                _animator.SetBool("isRunning", false);
-                if (_attackCooldown == 0)
-                {
-                    _attackCooldown = 1f;
-                    EventQueueManager.instance.AddEvent(new CmdAttack(_animator));
-                    EventQueueManager.instance.AddEvent(new CmdApplyDamage(_target.GetComponent<IDamagable>(), _damage));
-                }
-
+                _attackCooldown = 1f;
+                EventQueueManager.instance.AddEventToQueue(new CmdAttack(_animator,_target.GetComponent<IDamagable>(), _damage));
+                // EventQueueManager.instance.AddEvent( new CmdApplyDamage(_target.GetComponent<IDamagable>(), _damage));
             }
-            else if (distanceToTarget > _attackRange && _isTwist)
-            {
-                _navMeshAgent.isStopped = false;
-                EventQueueManager.instance.AddEvent(new CmdMovement(_animator, _enemyMovementController, _target.transform.position));
-            }
-            else if (!_isTwist)
-            {
-                _navMeshAgent.isStopped = true;
-                _animator.SetBool("isRunning", false);
-            }
+            
+        }
+        else if (distanceToTarget > _attackRange && _isTwist)
+        {
+            _navMeshAgent.isStopped = false;
+            EventQueueManager.instance.AddEvent(new CmdMovement(_animator,_enemyMovementController,_target.transform.position));
+        }else if (!_isTwist)
+        {
+            _navMeshAgent.isStopped = true;
+            _animator.SetBool("isRunning", false);
         }
         
 

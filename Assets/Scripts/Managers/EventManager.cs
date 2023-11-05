@@ -32,11 +32,29 @@ public class EventManager : MonoBehaviour
 
     #region IN_GAME_UI
     public event Action<float, float> OnCharacterLifeChange;
+    public event Action<float, float> OnCharacterAttack;
+    public event Action<float, float> OnCharacterTwist;
+    public event Action<float> OnCharacterJump;
     public event Action<int> OnCoinPickup;
 
     public void CharacterLifeChange(float currentLife, float maxLife)
     {
         if (OnCharacterLifeChange != null) OnCharacterLifeChange(currentLife, maxLife);
+    }
+
+    public void CharacterAttack(float current, float max)
+    {
+        if (OnCharacterAttack != null) OnCharacterAttack(current, max);
+    }
+
+    public void CharacterTwist(float current, float max)
+    {
+        if (OnCharacterTwist != null) OnCharacterTwist(current, max);
+    }
+
+    public void CharacterJump(float current)
+    {
+        if (OnCharacterJump != null) OnCharacterJump(current);
     }
     #endregion
 }
