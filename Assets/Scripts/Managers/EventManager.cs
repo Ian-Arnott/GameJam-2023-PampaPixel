@@ -40,7 +40,6 @@ public class EventManager : MonoBehaviour
 
     public void EventGameOver(bool isVictory) 
     {
-        if (isVictory) { Debug.Log("Congratulations! you won!"); }
         if (OnGameOver != null) OnGameOver(isVictory);
     }
 

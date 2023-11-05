@@ -8,7 +8,7 @@ using UnityEngine;
     {
         if (other.tag == "Player")
         {
-            EventManager.instance.EventGameWin();
+            if (GlobalVictory.instance.isVictory) EventManager.instance.EventGameWin();
             //Destroy(this.gameObject);
         }
 
