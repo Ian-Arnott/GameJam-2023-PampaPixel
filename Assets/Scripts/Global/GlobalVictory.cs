@@ -7,6 +7,7 @@ public class GlobalVictory : MonoBehaviour
 {
     public static GlobalVictory instance;
     public bool isVictory;
+    public bool hasObjective = false;
     private void Awake()
     {
         if (instance != null) Destroy(this.gameObject);

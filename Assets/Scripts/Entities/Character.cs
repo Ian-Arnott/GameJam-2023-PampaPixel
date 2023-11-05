@@ -56,7 +56,7 @@ public class Character : MonoBehaviour
         _animator = GetComponent<Animator>();
         _damage = Damage;
         _isTwist = false;
-        _hasObjective = false;
+        GlobalVictory.instance.hasObjective = false;
         _attackCooldown = 0;
         _twistCooldown = 0;
         _twistDuration = 0;
@@ -72,7 +72,7 @@ public class Character : MonoBehaviour
 
     void WinGame()
     {
-        if (_hasObjective)
+        if (GlobalVictory.instance.hasObjective)
         {
             //win game
             EventManager.instance.EventGameOver(true);
@@ -85,9 +85,9 @@ public class Character : MonoBehaviour
 
     void PickObjective()
     {
-        _hasObjective = true;
+        GlobalVictory.instance.hasObjective = true;
         _isTwist = true;
-        Debug.Log("_hasObjective: " + _hasObjective + " _isTwist: " + _isTwist);
+        Debug.Log("_hasObjective: " + GlobalVictory.instance.hasObjective + " _isTwist: " + _isTwist);
         EventManager.instance.EventTwist(_isTwist);
         _movementController.setForceMultiplier(2);
     }
@@ -122,7 +122,7 @@ public class Character : MonoBehaviour
 
         if (_twistDuration < 0) 
         {
-            if (_hasObjective) { _isTwist = true; _movementController.setForceMultiplier(2); } else { _isTwist = false; _movementController.setForceMultiplier(1); }
+            if (GlobalVictory.instance.hasObjective) { _isTwist = true; _movementController.setForceMultiplier(2); } else { _isTwist = false; _movementController.setForceMultiplier(1); }
 
             EventManager.instance.EventTwist(_isTwist);
             _twistDuration = 0;
@@ -141,7 +141,7 @@ public class Character : MonoBehaviour
         if (Input.GetKeyDown(_twist)) {
             if (_twistCooldown <= 0)
             {
-                if (_hasObjective) { _movementController.setForceMultiplier(1); } else { _movementController.setForceMultiplier(2); }
+                if (GlobalVictory.instance.hasObjective) { _movementController.setForceMultiplier(1); } else { _movementController.setForceMultiplier(2); }
                 _twistDuration = 6;
                 _twistCooldown = 6;
                 EventManager.instance.CharacterTwist(_twistCooldown, 6);

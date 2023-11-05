@@ -11,6 +11,7 @@ using UnityEngine;
         {
             EventManager.instance.EventObjectivePickup();
             GlobalVictory.instance.isVictory = true;
+            GlobalVictory.instance.hasObjective = true;
             Destroy(this.gameObject);
         }
 
