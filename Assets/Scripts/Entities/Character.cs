@@ -61,7 +61,17 @@ public class Character : MonoBehaviour
         
         if (_twistCooldown < 0) { _twistCooldown = 0; } else if (_twistCooldown > 0) { _twistCooldown -= Time.deltaTime; }
 
-        if (_twistDuration < 0) { _isTwist = false; EventManager.instance.EventTwist(_isTwist); _twistDuration = 0; } else if(_twistDuration > 0) { _twistDuration -= Time.deltaTime; }
+        if (_twistDuration < 0) 
+        {
+            _isTwist = false;
+            EventManager.instance.EventTwist(_isTwist);
+            _twistDuration = 0;
+            _movementController.setForceMultiplier(1);
+        } 
+        else if(_twistDuration > 0)
+        { 
+            _twistDuration -= Time.deltaTime; 
+        }
 
         if (_characterController.isGrounded && _velocity.y < 0)
         {
@@ -74,6 +84,7 @@ public class Character : MonoBehaviour
                 _twistDuration = 4;
                 _twistCooldown = 6;
                 _isTwist = !_isTwist;
+                _movementController.setForceMultiplier(2);
                 EventManager.instance.EventTwist(_isTwist);
             }
         }
@@ -82,7 +93,7 @@ public class Character : MonoBehaviour
 
         if (Input.GetKey(_moveBack)) EventQueueManager.instance.AddEvent(_cmdMovementBack);
 
-        if (Input.GetKey(_jump) && _isTwist) EventQueueManager.instance.AddEvent(_cmdJump);
+        if (Input.GetKey(_jump)) EventQueueManager.instance.AddEvent(_cmdJump);
 
         Debug.DrawRay(_raycast.transform.position, _raycast.transform.forward * _attackRange);
         if (Input.GetKeyDown(_attack) && _isTwist) {
