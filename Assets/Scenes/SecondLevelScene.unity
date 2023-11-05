@@ -39589,7 +39589,15 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 1bd5fbbc036491432aed49480b7e65e1,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 834694708}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 1bd5fbbc036491432aed49480b7e65e1,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 834694709}
   m_SourcePrefab: {fileID: 100100000, guid: 1bd5fbbc036491432aed49480b7e65e1, type: 3}
 --- !u!4 &834694706 stripped
 Transform:
@@ -39597,6 +39605,45 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 834694705}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &834694707 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 1bd5fbbc036491432aed49480b7e65e1,
+    type: 3}
+  m_PrefabInstance: {fileID: 834694705}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &834694708
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 834694707}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.08008055, y: 0.07988261, z: 0.10379861}
+  m_Center: {x: -7.763671e-25, y: 0.03999468, z: -0.03191129}
+--- !u!114 &834694709
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 834694707}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 695c26bc67f59270c80407c756c87885, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &836793748
 GameObject:
   m_ObjectHideFlags: 0
@@ -42924,6 +42971,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _isGameOver: 0
   _isVictory: 0
+  _targetSceneToLoad: ThirdLevelScene
 --- !u!114 &894324324
 MonoBehaviour:
   m_ObjectHideFlags: 0

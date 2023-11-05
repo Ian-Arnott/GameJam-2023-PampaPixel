@@ -20,11 +20,17 @@ public class EventManager : MonoBehaviour
     public event Action<bool> OnTwist;
     public event Action OnObjectivePickup;
     public event Action onGameOver;
+    public event Action onSceneChange;
     public event Action onGameWin;
 
     public void EventObjectivePickup()
     {
         if (OnObjectivePickup != null) OnObjectivePickup();
+    }
+    
+    public void EventSceneChange()
+    {
+        if (onSceneChange != null) onSceneChange();
     }
 
     public void EventGameWin()
