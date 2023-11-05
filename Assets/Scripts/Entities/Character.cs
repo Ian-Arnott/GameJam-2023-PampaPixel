@@ -97,7 +97,6 @@ public class Character : MonoBehaviour
 
         if (_characterController.isGrounded) { 
             EventManager.instance.CharacterJump(0);
-            _jumpCooldown = 0;
         }
 
         
@@ -165,13 +164,17 @@ public class Character : MonoBehaviour
 
         if (_jumpCooldown > 0)
         {
+            EventManager.instance.CharacterJump(1);
             _jumpCooldown -= Time.deltaTime;
             EventQueueManager.instance.AddEvent(_cmdJump);
+        }else {
+            _velocity.y += -10f * Time.deltaTime;
+            _characterController.Move(_velocity * Time.deltaTime);
         }
 
         if (Input.GetKey(_jump) && _characterController.isGrounded && _jumpCooldown<=0)
         {
-            _jumpCooldown = 5f; // Reset cooldown
+            _jumpCooldown = 1f; // Reset cooldown
             EventManager.instance.CharacterJump(1);
         }
 
@@ -206,7 +209,6 @@ public class Character : MonoBehaviour
         if (_characterController.velocity.z == 0) {
             _animator.SetBool("isWalking",false);
         }
-        _velocity.y += -10f * Time.deltaTime;
-        _characterController.Move(_velocity * Time.deltaTime);
+
     }
 }
