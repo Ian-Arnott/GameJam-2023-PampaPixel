@@ -28,7 +28,7 @@ public class LifeController : MonoBehaviour, IDamagable
 
         if (IsDead())
         {
-            // if (name == "Character") EventManager.instance.EventGameOver(false);
+            if (name == "Hywirl") EventManager.instance.EventGameOver(false);
             Die();
         }
     }
