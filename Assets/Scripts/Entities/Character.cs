@@ -109,7 +109,7 @@ public class Character : MonoBehaviour
 
         if (Input.GetKey(_moveBack)) EventQueueManager.instance.AddEvent(_cmdMovementBack);
 
-        if (Input.GetKey(_jump) && _isTwist) { 
+        if (Input.GetKey(_jump)) { 
             EventQueueManager.instance.AddEvent(_cmdJump);
             EventManager.instance.CharacterJump(1);
         }

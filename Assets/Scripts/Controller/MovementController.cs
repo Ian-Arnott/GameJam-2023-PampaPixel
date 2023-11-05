@@ -21,7 +21,7 @@ public class MovementController : MonoBehaviour, IMoveable, IJumpable
 
     public void setForceMultiplier(float multiplier)
     {
-        this.multiplier = Force * multiplier;
+        this.multiplier = multiplier;
     }
     #endregion
 
