@@ -56,10 +56,25 @@ public class Character : MonoBehaviour
 
     void Update()
     {
+        if (_characterController.isGrounded) EventManager.instance.CharacterJump(0);
 
-        if (_attackCooldown < 0) { _attackCooldown = 0; } else if(_attackCooldown > 0) {  _attackCooldown -= Time.deltaTime;}
+        if (_attackCooldown < 0) { 
+            _attackCooldown = 0; 
+            EventManager.instance.CharacterAttack(_attackCooldown, 2f);
+        }
+        else if(_attackCooldown > 0) {
+            _attackCooldown -= Time.deltaTime;
+            EventManager.instance.CharacterAttack(_attackCooldown, 2f);
+        }
         
-        if (_twistCooldown < 0) { _twistCooldown = 0; } else if (_twistCooldown > 0) { _twistCooldown -= Time.deltaTime; }
+        if (_twistCooldown < 0) { 
+            _twistCooldown = 0; 
+            EventManager.instance.CharacterTwist(_twistCooldown, 6f);
+        } 
+        else if (_twistCooldown > 0) { 
+            _twistCooldown -= Time.deltaTime;  
+            EventManager.instance.CharacterTwist(_twistCooldown, 6f);
+        }
 
         if (_twistDuration < 0) { _isTwist = false; EventManager.instance.EventTwist(_isTwist); _twistDuration = 0; } else if(_twistDuration > 0) { _twistDuration -= Time.deltaTime; }
 
@@ -71,8 +86,9 @@ public class Character : MonoBehaviour
         if (Input.GetKeyDown(_twist)) {
             if (_twistCooldown <= 0)
             {
-                _twistDuration = 4;
+                _twistDuration = 6;
                 _twistCooldown = 6;
+                EventManager.instance.CharacterTwist(_twistCooldown, 6);
                 _isTwist = !_isTwist;
                 EventManager.instance.EventTwist(_isTwist);
             }
@@ -82,13 +98,17 @@ public class Character : MonoBehaviour
 
         if (Input.GetKey(_moveBack)) EventQueueManager.instance.AddEvent(_cmdMovementBack);
 
-        if (Input.GetKey(_jump) && _isTwist) EventQueueManager.instance.AddEvent(_cmdJump);
+        if (Input.GetKey(_jump) && _isTwist) { 
+            EventQueueManager.instance.AddEvent(_cmdJump);
+            EventManager.instance.CharacterJump(1);
+        }
 
         Debug.DrawRay(_raycast.transform.position, _raycast.transform.forward * _attackRange);
         if (Input.GetKeyDown(_attack) && _isTwist) {
             if (_attackCooldown <= 0)
             {
-                _attackCooldown = 0.7f;
+                _attackCooldown = 2f;
+                EventManager.instance.CharacterAttack(_attackCooldown, 2f);
                 EventQueueManager.instance.AddEvent(new CmdAttack(_animator));
                 RaycastHit hit;
 
