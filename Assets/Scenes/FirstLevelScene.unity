@@ -11647,7 +11647,7 @@ SphereCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -49136,8 +49136,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 921926888}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.0029282551, y: -0.018307608, z: 0.00005361857, w: 0.99982816}
-  m_LocalPosition: {x: 14.999743, y: 3, z: 4.9493585}
+  m_LocalRotation: {x: 0.046260998, y: -0.8536164, z: 0.07696125, w: 0.5131043}
+  m_LocalPosition: {x: 11.658468, y: 3, z: -11.816224}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -51109,7 +51109,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 583a4f5350672004d8fc8d9163cb67b9,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 414.4
+      value: -18.01
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 583a4f5350672004d8fc8d9163cb67b9,
         type: 3}
@@ -55394,7 +55394,7 @@ SphereCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -58336,8 +58336,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1107478049}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.0029282551, y: -0.018307608, z: 0.00005361857, w: 0.99982816}
-  m_LocalPosition: {x: 14.999743, y: 3, z: 4.9493585}
+  m_LocalRotation: {x: 0.046260998, y: -0.8536164, z: 0.07696125, w: 0.5131043}
+  m_LocalPosition: {x: 11.658468, y: 3, z: -11.816224}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -65512,7 +65512,7 @@ SphereCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -70980,7 +70980,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Path: {fileID: 465948870}
-  m_PathPosition: 1.9999998
+  m_PathPosition: 0
   m_PositionUnits: 0
   m_PathOffset: {x: 5, y: 3, z: 0}
   m_XDamping: 0
@@ -87584,7 +87584,7 @@ SphereCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -111126,3 +111126,4 @@ SceneRoots:
   - {fileID: 661665260}
   - {fileID: 1629471952}
   - {fileID: 151082112}
+  - {fileID: 110543696}
