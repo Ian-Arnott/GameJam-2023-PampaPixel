@@ -45,7 +45,7 @@ public class Bunny : MonoBehaviour
     void Update()
     {
         bool atStartPoint = _startPoint.GetComponent<Collider>().bounds.Contains(transform.position);
-
+        bool playerInArea = _area.GetComponent<Collider>().bounds.Contains(_target.transform.position);
 
 
         if (!_isTwist) 
@@ -60,7 +60,8 @@ public class Bunny : MonoBehaviour
                     _animator.SetBool("isHappy", true);
                     _isHappy = true;
                 }
-                transform.LookAt(_target.transform.position);
+                if (playerInArea) { transform.LookAt(_target.transform.position); }
+                
                 // transform rotation facing _target.transform.position
 
             }
@@ -83,8 +84,6 @@ public class Bunny : MonoBehaviour
             }
 
             _animator.SetBool("isHappy", false);
-
-            bool playerInArea = _area.GetComponent<Collider>().bounds.Contains(_target.transform.position);
 
             if (playerInArea)
             {
