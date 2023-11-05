@@ -109,13 +109,10 @@ public class Character : MonoBehaviour
             {
                 _attackCooldown = 2f;
                 EventManager.instance.CharacterAttack(_attackCooldown, 2f);
-                EventQueueManager.instance.AddEvent(new CmdAttack(_animator));
                 RaycastHit hit;
-
                 if (Physics.Raycast(_raycast.transform.position, _raycast.transform.forward, out hit, _attackRange))
                 {
 
-                    
                     bool isEnemy = hit.transform.tag == "Enemy";
                     Debug.Log(isEnemy);
                     if (isEnemy)
@@ -123,14 +120,14 @@ public class Character : MonoBehaviour
                         IDamagable damagable = hit.collider.transform.GetComponent<IDamagable>();
                         if (damagable != null)
                         {
-                            EventQueueManager.instance.AddEvent(new CmdApplyDamage(damagable, _damage));
+                            EventQueueManager.instance.AddEventToQueue(new CmdAttack(_animator, damagable, _damage));
                         }
-                        //EventQueueManager.instance.AddEvent(new CmdApplyDamage(_target.GetComponent<IDamagable>(), _damage));
                     }
-
+                }
+                else {
+                    _animator.SetTrigger("Attack");
                 }
             }
-                
             
         }
         if (_characterController.velocity.z == 0) {

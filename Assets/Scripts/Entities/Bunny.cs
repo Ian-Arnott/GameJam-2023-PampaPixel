@@ -48,8 +48,8 @@ public class Bunny : MonoBehaviour
             if (_attackCooldown == 0)
             {
                 _attackCooldown = 1f;
-                EventQueueManager.instance.AddEvent(new CmdAttack(_animator));
-                EventQueueManager.instance.AddEvent( new CmdApplyDamage(_target.GetComponent<IDamagable>(), _damage));
+                EventQueueManager.instance.AddEventToQueue(new CmdAttack(_animator,_target.GetComponent<IDamagable>(), _damage));
+                // EventQueueManager.instance.AddEvent( new CmdApplyDamage(_target.GetComponent<IDamagable>(), _damage));
             }
             
         }
