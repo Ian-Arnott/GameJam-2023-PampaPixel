@@ -7,8 +7,11 @@ using UnityEngine.EventSystems;
 [RequireComponent(typeof(Actor))]
 public class Character : MonoBehaviour
 {
-    // HAS OBJECTIVE
+    // BOOLEANS
     private bool _hasObjective;
+    public bool _isGrounded;
+    private bool _isTwist;
+
 
 
     // CONTROLLERS
@@ -17,14 +20,13 @@ public class Character : MonoBehaviour
     private CharacterController _characterController;
     private Vector3 _velocity;
 
-    // TWIST
-    private bool _isTwist;
+    // CONSTANTS
+    [SerializeField] private float _groundDecay;
 
     // COOLDOWNS
     private float _twistCooldown;
     private float _twistDuration;
     private float _attackCooldown;
-
     private float _jumpCooldown;
 
     // ATTACK
@@ -34,18 +36,18 @@ public class Character : MonoBehaviour
     [SerializeField] private float _attackRange;
 
     // BINDING MOVEMENT KEYS
-    [SerializeField] private KeyCode _moveForward = KeyCode.D;
-    [SerializeField] private KeyCode _moveBack = KeyCode.A;
     [SerializeField] private KeyCode _jump = KeyCode.Space;
     [SerializeField] private KeyCode _attack = KeyCode.Mouse0;
+
+    // INPUTS
+    private float _xInput;
+    private float _yInput;
 
     // TWIST KEY
     [SerializeField] private KeyCode _twist = KeyCode.T;
 
 
     #region COMMANDS
-    private CmdMovement _cmdMovementForward;
-    private CmdMovement _cmdMovementBack;
     private CmdJump _cmdJump;
     #endregion
 
@@ -65,8 +67,6 @@ public class Character : MonoBehaviour
         EventManager.instance.OnObjectivePickup += PickObjective;
         EventManager.instance.onGameWin += WinGame;
 
-        _cmdMovementForward = new CmdMovement(_animator,_movementController, transform.forward);
-        _cmdMovementBack = new CmdMovement(_animator,_movementController, -transform.forward);
         _cmdJump = new CmdJump(_movementController,_characterController);
     }
 
@@ -94,6 +94,8 @@ public class Character : MonoBehaviour
 
     void Update()
     {
+        GetInput();
+        MoveWithInput();
 
         if (_characterController.isGrounded) { 
             EventManager.instance.CharacterJump(0);
@@ -150,18 +152,6 @@ public class Character : MonoBehaviour
             }
         }
 
-        if (Input.GetKey(_moveForward)) 
-        { 
-            EventQueueManager.instance.AddEvent(_cmdMovementForward);
-            transform.LookAt(new Vector3(transform.position.x, transform.position.y, transform.position.z+1));
-        }
-
-        if (Input.GetKey(_moveBack))
-        {
-            EventQueueManager.instance.AddEvent(_cmdMovementBack);
-            transform.LookAt(new Vector3(transform.position.x, transform.position.y, transform.position.z - 1));
-        }
-
         if (_jumpCooldown > 0)
         {
             EventManager.instance.CharacterJump(1);
@@ -210,5 +200,39 @@ public class Character : MonoBehaviour
             _animator.SetBool("isWalking",false);
         }
 
+    }
+
+    void FixedUpdate()
+    {
+        CheckGround();
+        ApplyFriction();
+    }
+
+    void GetInput()
+    {
+        _xInput = Input.GetAxis("Horizontal");
+        _yInput = Input.GetAxis("Vertical");
+    }
+
+    void MoveWithInput()
+    {
+        if (Mathf.Abs(_xInput) > 0) 
+        { 
+            EventQueueManager.instance.AddEvent(new CmdMovement(_animator,_movementController, new Vector3(0,0,_xInput)));
+            float sign = Mathf.Sign(_xInput);
+            transform.LookAt(new Vector3(transform.position.x, transform.position.y, transform.position.z + sign));
+        }
+
+    }
+
+    void CheckGround() {
+        _isGrounded = _characterController.isGrounded;
+    }
+
+    void ApplyFriction() {
+        if (_isGrounded && _xInput == 0)
+        {
+            //_characterController.velocity *= _groundDecay;
+        }
     }
 }
