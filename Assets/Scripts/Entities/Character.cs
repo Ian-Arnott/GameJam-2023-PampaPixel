@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -12,7 +13,13 @@ public class Character : MonoBehaviour
     public bool _isGrounded;
     private bool _isTwist;
 
+    private bool _isJumping;
 
+    
+
+    // GROUND COLLIDER
+    [SerializeField] private BoxCollider _boxCollider;
+    [SerializeField] private LayerMask _groundMask; 
 
     // CONTROLLERS
     private MovementController _movementController;
@@ -21,7 +28,8 @@ public class Character : MonoBehaviour
     private Vector3 _velocity;
 
     // CONSTANTS
-    [SerializeField] private float _groundDecay;
+    public float Speed => GetComponent<Actor>().Stats.MovementSpeed;
+    public float JumpForce => GetComponent<Actor>().Stats.JumpForce;
 
     // COOLDOWNS
     private float _twistCooldown;
@@ -58,6 +66,7 @@ public class Character : MonoBehaviour
         _animator = GetComponent<Animator>();
         _damage = Damage;
         _isTwist = false;
+        _isJumping = false;
         GlobalVictory.instance.hasObjective = false;
         _attackCooldown = 0;
         _twistCooldown = 0;
@@ -94,12 +103,18 @@ public class Character : MonoBehaviour
 
     void Update()
     {
+        if (_isGrounded && _velocity.y < 0)
+        {
+            _velocity.y = 0f;
+        }
         GetInput();
         MoveWithInput();
-
-        if (_characterController.isGrounded) { 
-            EventManager.instance.CharacterJump(0);
-        }
+        HandleJump();
+        _velocity.y += -10f*Time.deltaTime;
+        _characterController.Move(_velocity*Time.deltaTime);
+        // if (_characterController.isGrounded) { 
+        //     EventManager.instance.CharacterJump(0);
+        // }
 
         
 
@@ -134,10 +149,6 @@ public class Character : MonoBehaviour
             _twistDuration -= Time.deltaTime; 
         }
 
-        if (_characterController.isGrounded && _velocity.y < 0)
-        {
-            _velocity.y = 0f;
-        }
 
         if (Input.GetKeyDown(_twist)) {
             if (_twistCooldown <= 0)
@@ -151,23 +162,6 @@ public class Character : MonoBehaviour
                 EventManager.instance.EventTwist(_isTwist);
             }
         }
-
-        if (_jumpCooldown > 0)
-        {
-            EventManager.instance.CharacterJump(1);
-            _jumpCooldown -= Time.deltaTime;
-            EventQueueManager.instance.AddEvent(_cmdJump);
-        }else {
-            _velocity.y += -10f * Time.deltaTime;
-            _characterController.Move(_velocity * Time.deltaTime);
-        }
-
-        if (Input.GetKey(_jump) && _characterController.isGrounded && _jumpCooldown<=0)
-        {
-            _jumpCooldown = 1f; // Reset cooldown
-            EventManager.instance.CharacterJump(1);
-        }
-
 
         Debug.DrawRay(_raycast.transform.position, _raycast.transform.forward * _attackRange);
         if (Input.GetKeyDown(_attack) && _isTwist) {
@@ -205,7 +199,6 @@ public class Character : MonoBehaviour
     void FixedUpdate()
     {
         CheckGround();
-        ApplyFriction();
     }
 
     void GetInput()
@@ -218,21 +211,28 @@ public class Character : MonoBehaviour
     {
         if (Mathf.Abs(_xInput) > 0) 
         { 
-            EventQueueManager.instance.AddEvent(new CmdMovement(_animator,_movementController, new Vector3(0,0,_xInput)));
+            _characterController.Move(new Vector3(0,0,_xInput*Time.deltaTime*Speed));
             float sign = Mathf.Sign(_xInput);
             transform.LookAt(new Vector3(transform.position.x, transform.position.y, transform.position.z + sign));
         }
 
     }
 
-    void CheckGround() {
-        _isGrounded = _characterController.isGrounded;
-    }
-
-    void ApplyFriction() {
-        if (_isGrounded && _xInput == 0)
-        {
-            //_characterController.velocity *= _groundDecay;
+    void HandleJump()
+    {
+        if (_isJumping) { return; }
+        if (Mathf.Abs(_yInput) > 0 && _isGrounded) 
+        { 
+            _isJumping = true;
+            _velocity.y += Mathf.Sqrt(JumpForce * -3.0f * -10f);
         }
     }
+
+    void CheckGround() {
+        bool aux = _isGrounded;
+        _isGrounded = Physics.OverlapBox(_boxCollider.bounds.center,_boxCollider.bounds.extents, _boxCollider.transform.rotation ,_groundMask).Length > 0;
+        if (_isGrounded != aux && _isGrounded && _isJumping) { _isJumping = false; }
+    }
+
+
 }
