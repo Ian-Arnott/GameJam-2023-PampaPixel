@@ -6,9 +6,6 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
-    [SerializeField] private bool _isGameOver = false;
-    [SerializeField] private bool _isVictory = false;
-    //[SerializeField] private Text _gameoverMessage;
     [SerializeField] private string _targetSceneToLoad = "Level";
     private bool _enterScene;
 
@@ -41,12 +38,12 @@ public class GameManager : MonoBehaviour
 
     private void OnGameOver(bool isVictory)
     {
-        if (GlobalManager.instance.isVictory)
+        if (isVictory)
         {
-            Invoke("LoadWin", 1f);        
+            Invoke("LoadWin", 0.5f);        
         }
         else {
-            Invoke("LoadLose", 1f);        
+            Invoke("LoadLose", 0.5f);        
         }
 
     }
@@ -55,6 +52,7 @@ public class GameManager : MonoBehaviour
     {
         _enterScene = true;
     }
-    private void LoadWin() => SceneManager.LoadScene(6);
-    private void LoadLose() => SceneManager.LoadScene(5);
+    
+    private void LoadWin() => SceneManager.LoadScene("EndSceneV");
+    private void LoadLose() => SceneManager.LoadScene("EndSceneD");
 }

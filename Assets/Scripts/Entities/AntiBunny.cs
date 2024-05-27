@@ -8,7 +8,6 @@ using UnityEngine.AI;
 
     private float _attackCooldown;
 
-    public int Damage => GetComponent<Actor>().Stats.Damage;
     private Animator _animator;
     private EnemyMovementController _enemyMovementController;
     private NavMeshAgent _navMeshAgent;
@@ -31,7 +30,7 @@ using UnityEngine.AI;
         _enemyMovementController = GetComponent<EnemyMovementController>();
         _animator = GetComponent<Animator>();
         _isTwist = false;
-        _damage = Damage;
+        _damage = 0;
         EventManager.instance.OnTwist += Twist;
         _attackCooldown = 0;
     }

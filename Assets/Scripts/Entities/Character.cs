@@ -29,7 +29,7 @@ public class Character : MonoBehaviour
     public float JumpForce => GetComponent<Actor>().Stats.JumpForce;
 
     // TWIST
-    private float _twistCooldown;
+    [SerializeField] private float _twistCooldown;
     private float _twistDuration;
 
     // INPUTS
@@ -40,9 +40,7 @@ public class Character : MonoBehaviour
         _isTwist = false;
         _isJumping = false;
         GlobalManager.instance.hasObjective = false;
-        _twistCooldown = 0;
         _twistDuration = 0;
-
         EventManager.instance.OnObjectivePickup += PickObjective;
         EventManager.instance.onGameWin += WinGame;
 
@@ -50,15 +48,7 @@ public class Character : MonoBehaviour
 
     void WinGame()
     {
-        if (GlobalManager.instance.hasObjective)
-        {
-            //win game
-            EventManager.instance.EventGameOver(true);
-        }
-        else
-        {
-            //do nothing
-        }
+        if (GlobalManager.instance.hasObjective) EventManager.instance.EventGameOver(true);
     }
 
     void PickObjective()
@@ -71,42 +61,15 @@ public class Character : MonoBehaviour
 
     void Update()
     {
-        if (_isGrounded && _velocity.y < 0)
-        {
-            _velocity.y = 0f;
-        }
+        if (_isGrounded && _velocity.y < 0) _velocity.y = 0f;
         GetInput();
         MoveWithInput();
         HandleJump();
         _velocity.y += -_playerGravity*Time.deltaTime;
         _characterController.Move(_velocity*Time.deltaTime);
-        if (_isGrounded) 
-        { 
-            EventManager.instance.CharacterJump(0);
-        } else EventManager.instance.CharacterJump(100);
+        if (_isGrounded) EventManager.instance.CharacterJump(0);
+        else EventManager.instance.CharacterJump(100);
         HandleTwist();
-
-        // if (_twistDuration < 0) 
-        // {
-        //     EventManager.instance.EventTwist(_isTwist);
-        //     _twistDuration = 0;   
-        // } 
-        // else if(_twistDuration > 0)
-        // { 
-        //     _twistDuration -= Time.deltaTime; 
-        // }
-        // // if (Input.GetKeyDown(_twist)) {
-        //     if (_twistCooldown <= 0)
-        //     {
-        //         _twistDuration = 6;
-        //         _twistCooldown = 6;
-        //         EventManager.instance.CharacterTwist(_twistCooldown, 6);
-        //         _isTwist = !_isTwist;
-                
-        //         EventManager.instance.EventTwist(_isTwist);
-        //     }
-        // }
-
     }
 
     void FixedUpdate()
@@ -149,10 +112,26 @@ public class Character : MonoBehaviour
 
     void HandleTwist()
     {
-        if (Input.GetButtonDown("Twist"))
-        {            
+        if (_twistDuration < 0) 
+        {
             _isTwist = !_isTwist;
             EventManager.instance.EventTwist(_isTwist);
+            _twistDuration = 0;   
+        } 
+        else if(_twistDuration > 0)
+        { 
+            _twistDuration -= Time.deltaTime; 
+            EventManager.instance.CharacterTwist(_twistDuration, _twistCooldown);
+        }
+        if (Input.GetButtonDown("Twist"))
+        {
+            if (_twistDuration <= 0)
+            {
+                _twistDuration = _twistCooldown;
+                _isTwist = !_isTwist;
+                EventManager.instance.CharacterTwist(_twistDuration, _twistCooldown);
+                EventManager.instance.EventTwist(_isTwist);
+            }
         }
     }
 

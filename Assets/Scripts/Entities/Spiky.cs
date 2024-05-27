@@ -7,7 +7,6 @@ using UnityEngine;
 public class Spiky : MonoBehaviour
 {
 
-    public int Damage => GetComponent<Actor>().Stats.Damage;
     private UnityEngine.AI.NavMeshAgent _agent;
     [SerializeField]
     private List<GameObject> _waypoints;
@@ -21,7 +20,7 @@ public class Spiky : MonoBehaviour
     {
         index = 0;
         _agent = GetComponent<UnityEngine.AI.NavMeshAgent>();
-        _damage = Damage;
+        _damage = 0;
     }
 
     void Update()
