@@ -39,7 +39,7 @@ public class Character : MonoBehaviour
     {
         _isTwist = false;
         _isJumping = false;
-        GlobalVictory.instance.hasObjective = false;
+        GlobalManager.instance.hasObjective = false;
         _twistCooldown = 0;
         _twistDuration = 0;
 
@@ -50,7 +50,7 @@ public class Character : MonoBehaviour
 
     void WinGame()
     {
-        if (GlobalVictory.instance.hasObjective)
+        if (GlobalManager.instance.hasObjective)
         {
             //win game
             EventManager.instance.EventGameOver(true);
@@ -63,9 +63,9 @@ public class Character : MonoBehaviour
 
     void PickObjective()
     {
-        GlobalVictory.instance.hasObjective = true;
+        GlobalManager.instance.hasObjective = true;
         _isTwist = true;
-        Debug.Log("_hasObjective: " + GlobalVictory.instance.hasObjective + " _isTwist: " + _isTwist);
+        Debug.Log("_hasObjective: " + GlobalManager.instance.hasObjective + " _isTwist: " + _isTwist);
         EventManager.instance.EventTwist(_isTwist);
     }
 
@@ -84,7 +84,7 @@ public class Character : MonoBehaviour
         { 
             EventManager.instance.CharacterJump(0);
         } else EventManager.instance.CharacterJump(100);
-        
+        HandleTwist();
 
         // if (_twistDuration < 0) 
         // {
@@ -145,6 +145,15 @@ public class Character : MonoBehaviour
         bool aux = _isGrounded;
         _isGrounded = Physics.OverlapBox(_boxCollider.bounds.center,_boxCollider.bounds.extents, _boxCollider.transform.rotation ,_groundMask).Length > 0;
         if (_isGrounded != aux && _isGrounded && _isJumping) { _isJumping = false; }
+    }
+
+    void HandleTwist()
+    {
+        if (Input.GetButtonDown("Twist"))
+        {            
+            _isTwist = !_isTwist;
+            EventManager.instance.EventTwist(_isTwist);
+        }
     }
 
 

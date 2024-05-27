@@ -40,7 +40,7 @@ public class LifeController : MonoBehaviour, IDamagable
     private void Die(){
         Animator animator = this.GetComponent<Animator>();
         animator.SetTrigger("Die");
-        GlobalVictory.instance.isVictory = false;
+        GlobalManager.instance.isVictory = false;
         EventManager.instance.EventGameOver(false);
     } 
     #endregion

@@ -41,7 +41,7 @@ public class GameManager : MonoBehaviour
 
     private void OnGameOver(bool isVictory)
     {
-        if (GlobalVictory.instance.isVictory)
+        if (GlobalManager.instance.isVictory)
         {
             Invoke("LoadWin", 1f);        
         }

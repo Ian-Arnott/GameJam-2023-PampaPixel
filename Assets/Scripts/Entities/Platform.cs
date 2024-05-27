@@ -4,14 +4,20 @@ using UnityEngine;
 
 public class Platform : MonoBehaviour
 {
-    [SerializeField] 
-    private List<GameObject> _waypoints;
-    private float _speed = 3f;
-    private bool _movingToEnd = true;
-    void Update()
+    [SerializeField] private int _startPos; 
+    [SerializeField] private int _endPos; 
+ 
+    // Start is called before the first frame update
+    void Start()
     {
-        Vector3 target = _movingToEnd ? _waypoints[1].transform.position : _waypoints[1].transform.position;
-        transform.position = Vector3.MoveTowards(transform.position, target, _speed * Time.deltaTime);
-        if (transform.position == target) _movingToEnd = !_movingToEnd; 
+        EventManager.instance.OnTwist += ActionTwist;
+
+    }
+
+    void ActionTwist(bool twist)
+    {
+        if(twist) transform.position = new Vector3(_endPos,transform.position.y,transform.position.z);
+        else transform.position = new Vector3(_startPos,transform.position.y,transform.position.z);
+     
     }
 }

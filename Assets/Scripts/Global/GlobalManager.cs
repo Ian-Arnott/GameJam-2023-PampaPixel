@@ -3,11 +3,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GlobalVictory : MonoBehaviour
+public class GlobalManager: MonoBehaviour
 {
-    public static GlobalVictory instance;
+    public static GlobalManager instance;
     public bool isVictory;
     public bool hasObjective = false;
+    public bool twist = false;
     private void Awake()
     {
         if (instance != null) Destroy(this.gameObject);
