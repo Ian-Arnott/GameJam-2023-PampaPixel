@@ -6,24 +6,15 @@ using UnityEngine.AI;
 public class Bunny : MonoBehaviour
 {
 
-    [SerializeField] private float _attackCooldown;
     [SerializeField] private Animator _animator;
-    [SerializeField] private int _damage;
     private bool _isTwist;
-
     [SerializeField] private GameObject _area; // cube where it is
-    private bool _isHappy;
-    private bool _isActive;
-
     [SerializeField] private GameObject _target;
-    [SerializeField] private float _attackRange = 2.0f; // La distancia a la que el enemigo debe detenerse y atacar
 
     void Start()
     {
         _isTwist = false;
-        _isActive = false;
         EventManager.instance.OnTwist += Twist;
-        _attackCooldown = 0;
     }
 
     void Twist(bool twist)

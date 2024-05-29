@@ -11,6 +11,9 @@ using UnityEngine;
             EventManager.instance.EventGameOver(false);
             Destroy(other.gameObject);
         }
-
+        else
+        {
+            Destroy(other.gameObject);
+        }
     }
 }

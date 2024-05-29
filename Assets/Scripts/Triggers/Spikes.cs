@@ -23,8 +23,10 @@ public class Spikes : MonoBehaviour
     {
         if (_attackDuration > 0) _attackDuration -= Time.deltaTime;
         if (_attackDuration < 0) _attackDuration = 0;
-        if (_playerInArea) {
-            if (_attackDuration == 0) {
+        if (_playerInArea) 
+        {
+            if (_attackDuration == 0) 
+            {
                 _attackDuration = _attackCooldown;
                 EventQueueManager.instance.AddEventToQueue(new CmdApplyDamage(_target.GetComponent<IDamagable>(), _damage));
             }
