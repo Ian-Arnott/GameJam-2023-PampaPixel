@@ -2376,6 +2376,7 @@ Transform:
   - {fileID: 1675550856}
   - {fileID: 1023983698}
   - {fileID: 696078098}
+  - {fileID: 1845754408}
   m_Father: {fileID: 18127246}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &320653002
@@ -8412,7 +8413,7 @@ GameObject:
   - component: {fileID: 1120386065}
   - component: {fileID: 1120386064}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: Death Zone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14552,7 +14553,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 310643643}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 282bbd2265b2dcc45b5da02fa61e3a0f,
         type: 3}
@@ -14614,6 +14615,12 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 282bbd2265b2dcc45b5da02fa61e3a0f, type: 3}
+--- !u!4 &1845754408 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 282bbd2265b2dcc45b5da02fa61e3a0f,
+    type: 3}
+  m_PrefabInstance: {fileID: 1845754407}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1850469815 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: ddfafed79f522fa41a09d29a69c8e75c,
@@ -16040,9 +16047,8 @@ SceneRoots:
   - {fileID: 385267121}
   - {fileID: 1182234424}
   - {fileID: 546812077}
+  - {fileID: 1120386068}
+  - {fileID: 1238819755}
   - {fileID: 18127246}
   - {fileID: 505217863}
   - {fileID: 1976298205}
-  - {fileID: 1238819755}
-  - {fileID: 1120386068}
-  - {fileID: 1845754407}
