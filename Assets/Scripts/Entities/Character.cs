@@ -37,7 +37,7 @@ public class Character : MonoBehaviour
 
     void Start()
     {
-        _isTwist = false;
+        _isTwist = GlobalManager.instance.hasObjective;
         _isJumping = false;
         GlobalManager.instance.hasObjective = false;
         _twistDuration = 0;
@@ -55,7 +55,6 @@ public class Character : MonoBehaviour
     {
         GlobalManager.instance.hasObjective = true;
         _isTwist = true;
-        Debug.Log("_hasObjective: " + GlobalManager.instance.hasObjective + " _isTwist: " + _isTwist);
         EventManager.instance.EventTwist(_isTwist);
     }
 

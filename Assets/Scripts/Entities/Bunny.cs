@@ -13,7 +13,7 @@ public class Bunny : MonoBehaviour
 
     void Start()
     {
-        _isTwist = false;
+        _isTwist = GlobalManager.instance.hasObjective;
         EventManager.instance.OnTwist += Twist;
     }
 
