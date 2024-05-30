@@ -9,9 +9,8 @@ using UnityEngine.EventSystems;
 public class Character : MonoBehaviour
 {
     // BOOLEANS
-    private bool _hasObjective;
     private bool _isGrounded;
-    private bool _isTwist;
+    [SerializeField] private bool _isTwist;
     private bool _isJumping;
     
     // GROUND COLLIDER
@@ -37,9 +36,8 @@ public class Character : MonoBehaviour
 
     void Start()
     {
-        _isTwist = GlobalManager.instance.hasObjective;
+        EventManager.instance.EventTwist(_isTwist);
         _isJumping = false;
-        GlobalManager.instance.hasObjective = false;
         _twistDuration = 0;
         EventManager.instance.OnObjectivePickup += PickObjective;
         EventManager.instance.onGameWin += WinGame;

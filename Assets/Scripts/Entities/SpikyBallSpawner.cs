@@ -17,7 +17,9 @@ public class SpikyBallSpawner : MonoBehaviour
 
     void Update()
     {
-        bool playerInArea = _area.GetComponent<Collider>().bounds.Contains(_target.transform.position);
+        bool playerInArea = false;
+        if(_target!=null) 
+            playerInArea = _area.GetComponent<Collider>().bounds.Contains(_target.transform.position);
         if (playerInArea)
         {
             if (_spawnCurrent > 0) _spawnCurrent -= Time.deltaTime;

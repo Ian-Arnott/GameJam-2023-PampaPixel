@@ -13,7 +13,6 @@ public class Bunny : MonoBehaviour
 
     void Start()
     {
-        _isTwist = GlobalManager.instance.hasObjective;
         EventManager.instance.OnTwist += Twist;
     }
 
@@ -24,8 +23,9 @@ public class Bunny : MonoBehaviour
 
     void Update()
     {
-        bool playerInArea = _area.GetComponent<Collider>().bounds.Contains(_target.transform.position);
-
+        bool playerInArea = false;
+        if(_target!=null) 
+            playerInArea = _area.GetComponent<Collider>().bounds.Contains(_target.transform.position);
         if (playerInArea) {
             _animator.SetBool("isActive",true);
             if (_isTwist) 
