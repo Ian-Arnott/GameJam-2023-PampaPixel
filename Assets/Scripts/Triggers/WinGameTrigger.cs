@@ -8,7 +8,7 @@ using UnityEngine;
     {
         if (other.tag == "Player")
         {
-            if (GlobalManager.instance.hasObjective) EventManager.instance.EventGameOver(true);
+            EventManager.instance.EventGameOver(true);
             //Destroy(this.gameObject);
         }
 

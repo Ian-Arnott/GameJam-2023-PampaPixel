@@ -9,11 +9,7 @@ using UnityEngine;
         if (other.tag == "Player")
         {
             EventManager.instance.EventGameOver(false);
-            Destroy(other.gameObject);
         }
-        else
-        {
-            Destroy(other.gameObject);
-        }
+        Destroy(other.gameObject);
     }
 }

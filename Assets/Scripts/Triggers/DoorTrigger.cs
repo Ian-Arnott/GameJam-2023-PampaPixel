@@ -18,7 +18,6 @@ public class DoorTrigger : MonoBehaviour
         foreach (GameObject door in doors)
         {
             door.transform.Rotate(new Vector3(0,0,Mathf.Pow(-1,i++)*90));
-            // door.transform.rotation.Set(door.transform.rotation.x,door.transform.rotation.y,Mathf.Pow(-1,i++)*90,door.transform.rotation.w);
         }
     }
 
