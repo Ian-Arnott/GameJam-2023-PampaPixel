@@ -34,6 +34,12 @@ public class Character : MonoBehaviour
     // INPUTS
     private float _xInput;
 
+    // AUDIO
+    [SerializeField] private AudioClip _jumpClip;
+    [SerializeField] private AudioClip _hurtClip;
+    [SerializeField] private AudioClip _twistClip;
+    [SerializeField] private AudioSource _audioSource;
+
     void Start()
     {
         EventManager.instance.EventTwist(_isTwist);
@@ -42,6 +48,11 @@ public class Character : MonoBehaviour
         EventManager.instance.OnObjectivePickup += PickObjective;
         EventManager.instance.onGameWin += WinGame;
 
+        // Initialize AudioSource
+        if (_audioSource == null)
+        {
+            _audioSource = gameObject.AddComponent<AudioSource>();
+        }
     }
 
     void WinGame()
@@ -54,6 +65,7 @@ public class Character : MonoBehaviour
         GlobalManager.instance.hasObjective = true;
         _isTwist = true;
         EventManager.instance.EventTwist(_isTwist);
+        PlayAudioClip(_twistClip);
     }
 
     void Update()
@@ -98,6 +110,7 @@ public class Character : MonoBehaviour
         { 
             _isJumping = true;
             _velocity.y += Mathf.Sqrt(JumpForce * -1.0f * -_playerGravity);
+            PlayAudioClip(_jumpClip);
         }
     }
 
@@ -128,9 +141,16 @@ public class Character : MonoBehaviour
                 _isTwist = !_isTwist;
                 EventManager.instance.CharacterTwist(_twistDuration, _twistCooldown);
                 EventManager.instance.EventTwist(_isTwist);
+                PlayAudioClip(_twistClip);
             }
         }
     }
 
-
+    void PlayAudioClip(AudioClip clip)
+    {
+        if (clip != null && _audioSource != null)
+        {
+            _audioSource.PlayOneShot(clip);
+        }
+    }
 }

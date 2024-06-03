@@ -22,7 +22,7 @@ public class SoundEffectController : MonoBehaviour, IListenable
         _audioSource.clip = AudioClip;
     }
 
-    public void PlayOnShot() => AudioSource.PlayOneShot(AudioClip);
+    public void PlayOneShot() => AudioSource.PlayOneShot(AudioClip);
 
     public void Play() => AudioSource.Play();
 
