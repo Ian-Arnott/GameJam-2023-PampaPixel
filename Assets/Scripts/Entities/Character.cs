@@ -46,6 +46,7 @@ public class Character : MonoBehaviour
         _isJumping = false;
         _twistDuration = 0;
         EventManager.instance.OnObjectivePickup += PickObjective;
+        EventManager.instance.OnCharacterLifeChange += DamageHandler;
         EventManager.instance.onGameWin += WinGame;
 
         // Initialize AudioSource
@@ -144,6 +145,12 @@ public class Character : MonoBehaviour
                 PlayAudioClip(_twistClip);
             }
         }
+    }
+
+    void DamageHandler(float currentLife, float maxLife)
+    {
+        _animator.SetTrigger("TakeDamage");
+        PlayAudioClip(_hurtClip);
     }
 
     void PlayAudioClip(AudioClip clip)

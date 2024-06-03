@@ -37,8 +37,8 @@ RenderSettings:
   m_ReflectionBounces: 1
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
-  m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.14151205, g: 0.03406315, b: 0.032174587, a: 1}
+  m_Sun: {fileID: 57616041}
+  m_IndirectSpecularColor: {r: 0.14153619, g: 0.034152597, b: 0.032205157, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -97,8 +97,10 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 0}
-  m_LightingSettings: {fileID: 0}
+  m_LightingDataAsset: {fileID: 112000000, guid: b0330fbf2addd60c58d9dbb17f3dc942,
+    type: 2}
+  m_LightingSettings: {fileID: 4890085278179872738, guid: 43f55474cebb2a1a9a0fb4c40e886b1b,
+    type: 2}
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -137,7 +139,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &18127246
 Transform:
@@ -219,6 +221,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Wall_FirstAge (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9a161a309cd58c4438823758ea5a3ba8,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -364,6 +371,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Mine
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: d585ff8be13115b49bf601bcab850f64,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -458,6 +470,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Mine
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: d585ff8be13115b49bf601bcab850f64,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -490,7 +507,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &47832915
 Transform:
@@ -641,6 +658,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Resource_PineTree_Group (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: c7a16dcdeb0174846ad6469d8ca11c2f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -765,7 +787,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 4
+  m_Lightmapping: 2
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -839,6 +861,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Houses_SecondAge_1_Level3
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ca4fc9ee02aa85848a60ca1d8c5fcef9,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -906,6 +933,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Resource_Tree_Group (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 3b350168a46642b46bc5c3a1abea3c84,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1092,6 +1124,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Resource_Tree_Group (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 3b350168a46642b46bc5c3a1abea3c84,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1120,7 +1157,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &108106253
 Transform:
@@ -1352,6 +1389,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Resource_PineTree_Group (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: c7a16dcdeb0174846ad6469d8ca11c2f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1419,6 +1461,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Mountain_Group_1 (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: cef808133d1ab0d459558c9bc0e6a0c7,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1500,6 +1547,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Houses_SecondAge_3_Level2
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9c7853686c3992d4f8222c9d93897b55,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1567,6 +1619,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Resource_Rock_2 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 03debba4b573f004388fb6cee82b2efd,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1647,6 +1704,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Resource_Rock_3
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 963456638f219fc438831c4ba5ea03e1,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1794,7 +1856,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &289846160
 Transform:
@@ -1899,7 +1961,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &294598718
 Transform:
@@ -2001,7 +2063,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &310643643
 Transform:
@@ -2110,11 +2172,161 @@ PrefabInstance:
       propertyPath: m_Name
       value: TownCenter_FirstAge_Level2
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 908cf057d780fd4458c5285bf8aaed7c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 908cf057d780fd4458c5285bf8aaed7c, type: 3}
+--- !u!1 &338986985
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 338986986}
+  - component: {fileID: 338986987}
+  - component: {fileID: 338986988}
+  m_Layer: 0
+  m_Name: Audio Source
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &338986986
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 338986985}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.44, y: 3, z: 167.85}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1932343305}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &338986987
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 338986985}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 0.542
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 7
+  Pan2D: 0
+  rolloffMode: 2
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0.058003023
+      value: 0.60035324
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: -1.1666666
+      outSlope: -1.1666666
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0.29722223
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!114 &338986988
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 338986985}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c059238b3096ea826af5fbe3826f9559, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _audioClip: {fileID: 8300000, guid: 92fd543c354580031b89fb162ed068b3, type: 3}
+  _audioClipTwist: {fileID: 8300000, guid: 46b7c48aeab587fa5a99db746b6aa90b, type: 3}
+  _audioSource: {fileID: 338986987}
+  cooldown: 3
 --- !u!1001 &348939608
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2177,6 +2389,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Resource_Rock_1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: cdeaf068380e14849aaddc2c516b35e6,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2332,6 +2549,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Wall_FirstAge
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9a161a309cd58c4438823758ea5a3ba8,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2600,6 +2822,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wall_FirstAge (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9a161a309cd58c4438823758ea5a3ba8,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2713,6 +2940,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Resource_Tree_Group (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 3b350168a46642b46bc5c3a1abea3c84,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2741,7 +2973,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &391877145
 Transform:
@@ -2892,6 +3124,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Resource_PineTree (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 33bf1f9f8ed8bc149ba2cce15737e942,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3036,6 +3273,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Mountain_Group_2
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 92faf5f7f0aaa394f960082378ed3b3a,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3144,6 +3386,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Resource_PineTree_Group (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: c7a16dcdeb0174846ad6469d8ca11c2f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3212,6 +3459,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Resource_Rock_1 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: cdeaf068380e14849aaddc2c516b35e6,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3246,7 +3498,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!65 &467433604
 BoxCollider:
@@ -3455,6 +3707,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Mountain_Group_1 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: cef808133d1ab0d459558c9bc0e6a0c7,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3645,6 +3902,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Mountain_Group_1 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: cef808133d1ab0d459558c9bc0e6a0c7,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3725,6 +3987,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Houses_SecondAge_3_Level3
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 972d3b505dfe5db40b777237361e52b1,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3793,6 +4060,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Resource_Tree1 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0b6f659efb65648468884e5ff242f1a1,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3860,6 +4132,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Resource_Tree_Group (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 3b350168a46642b46bc5c3a1abea3c84,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3940,6 +4217,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Market_SecondAge_Level3
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: bf70f4dfe3cc3a644b35e9993f8df89d,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4007,6 +4289,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Mountain_Group_2 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 92faf5f7f0aaa394f960082378ed3b3a,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4076,6 +4363,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Resource_Rock_3 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 963456638f219fc438831c4ba5ea03e1,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4144,6 +4436,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Resource_PineTree
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 33bf1f9f8ed8bc149ba2cce15737e942,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4196,7 +4493,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &628238406
 Transform:
@@ -4323,6 +4620,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Mountain_Group_1
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: cef808133d1ab0d459558c9bc0e6a0c7,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4403,6 +4705,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Resource_Tree_Group (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 3b350168a46642b46bc5c3a1abea3c84,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4470,6 +4777,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Resource_Rock_1 (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: cdeaf068380e14849aaddc2c516b35e6,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4539,6 +4851,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Resource_PineTree_Group (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: c7a16dcdeb0174846ad6469d8ca11c2f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4573,7 +4890,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &669354463
 Transform:
@@ -4730,6 +5047,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Resource_Rock_1 (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: cdeaf068380e14849aaddc2c516b35e6,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4798,6 +5120,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wall_FirstAge (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9a161a309cd58c4438823758ea5a3ba8,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4840,6 +5167,151 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 696078095}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &723052684
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 723052685}
+  - component: {fileID: 723052687}
+  - component: {fileID: 723052686}
+  m_Layer: 0
+  m_Name: Audio Source (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &723052685
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 723052684}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.44, y: 3, z: 221.1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1932343305}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &723052686
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 723052684}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c059238b3096ea826af5fbe3826f9559, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _audioClip: {fileID: 8300000, guid: 92fd543c354580031b89fb162ed068b3, type: 3}
+  _audioClipTwist: {fileID: 8300000, guid: 46b7c48aeab587fa5a99db746b6aa90b, type: 3}
+  _audioSource: {fileID: 723052687}
+  cooldown: 3
+--- !u!82 &723052687
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 723052684}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 0.542
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 7
+  Pan2D: 0
+  rolloffMode: 2
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0.058003023
+      value: 0.60035324
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: -1.1666666
+      outSlope: -1.1666666
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0.29722223
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1001 &728464891
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4902,6 +5374,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Mountain_Group_1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: cef808133d1ab0d459558c9bc0e6a0c7,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4976,6 +5453,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Resource_Rock_1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: cdeaf068380e14849aaddc2c516b35e6,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5118,6 +5600,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Mountain_Group_1 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: cef808133d1ab0d459558c9bc0e6a0c7,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5152,7 +5639,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &770370231
 Transform:
@@ -5257,7 +5744,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &771711144
 Transform:
@@ -5444,7 +5931,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &786331328
 Transform:
@@ -5595,6 +6082,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: WatchTower_FirstAge_Level2
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 949f58848fab8794e90376d2669a0105,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5668,6 +6160,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Mountain_Group_1 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: cef808133d1ab0d459558c9bc0e6a0c7,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5743,6 +6240,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Resource_PineTree_Group (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: c7a16dcdeb0174846ad6469d8ca11c2f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5774,7 +6276,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &890110676
 Transform:
@@ -5958,6 +6460,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Resource_Tree_Group (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 3b350168a46642b46bc5c3a1abea3c84,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6025,6 +6532,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Resource_Tree_Group (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 3b350168a46642b46bc5c3a1abea3c84,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6096,7 +6608,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!65 &916035181
 BoxCollider:
@@ -6202,6 +6714,8 @@ GameObject:
   - component: {fileID: 919904231}
   - component: {fileID: 919904230}
   - component: {fileID: 919904229}
+  - component: {fileID: 919904233}
+  - component: {fileID: 919904232}
   m_Layer: 0
   m_Name: Collider (2)
   m_TagString: Untagged
@@ -6295,6 +6809,118 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 919904227}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &919904232
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 919904227}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2bb257fcc79401b47989183550424c86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _audioClip: {fileID: 8300000, guid: c3ab909bfc45476d589f461533b9ea18, type: 3}
+  _audioSource: {fileID: 919904233}
+  _target: {fileID: 1238819756}
+  _area: {fileID: 919904227}
+--- !u!82 &919904233
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 919904227}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 20
+  Pan2D: 0
+  rolloffMode: 2
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0.9126892
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: -1.0526316
+      outSlope: -1.0526316
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &923152492
 GameObject:
   m_ObjectHideFlags: 0
@@ -6313,7 +6939,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!65 &923152493
 BoxCollider:
@@ -6482,6 +7108,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Farm_SecondAge_Level3
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b28daa4b4df2e5845a705cb67c25cb3c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6537,7 +7168,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &956590873
 Transform:
@@ -6688,6 +7319,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Mountain_Group_2 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 92faf5f7f0aaa394f960082378ed3b3a,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6755,6 +7391,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Resource_Tree_Group (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 3b350168a46642b46bc5c3a1abea3c84,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7021,7 +7662,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1014800119
 Transform:
@@ -7178,6 +7819,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wall_FirstAge (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9a161a309cd58c4438823758ea5a3ba8,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7237,7 +7883,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1028886039
 Transform:
@@ -7552,7 +8198,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1058009901
 Transform:
@@ -7703,6 +8349,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Resource_Rock_2 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 03debba4b573f004388fb6cee82b2efd,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7783,6 +8434,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Resource_PineTree (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 33bf1f9f8ed8bc149ba2cce15737e942,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7805,7 +8461,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1091451230
 Transform:
@@ -7956,6 +8612,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wall_FirstAge (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9a161a309cd58c4438823758ea5a3ba8,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8066,6 +8727,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Wall_FirstAge (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9a161a309cd58c4438823758ea5a3ba8,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -8253,6 +8919,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Resource_Tree_Group (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 3b350168a46642b46bc5c3a1abea3c84,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8327,6 +8998,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Resource_PineTree_Group (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: c7a16dcdeb0174846ad6469d8ca11c2f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8394,6 +9070,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Resource_PineTree (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 33bf1f9f8ed8bc149ba2cce15737e942,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -8478,6 +9159,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Resource_PineTree_Group (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: c7a16dcdeb0174846ad6469d8ca11c2f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -8733,6 +9419,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: TowerHouse_FirstAge
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ddfafed79f522fa41a09d29a69c8e75c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8800,6 +9491,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Resource_PineTree (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 33bf1f9f8ed8bc149ba2cce15737e942,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -8875,6 +9571,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Mountain_Group_2 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 92faf5f7f0aaa394f960082378ed3b3a,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8942,6 +9643,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Temple_FirstAge_Level1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 2c2378d082fe4ba4bb14d37f5b673c7c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -9307,6 +10013,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 1238819765}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 583a4f5350672004d8fc8d9163cb67b9,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1238819766}
   m_SourcePrefab: {fileID: 100100000, guid: 583a4f5350672004d8fc8d9163cb67b9, type: 3}
 --- !u!1 &1238819756 stripped
 GameObject:
@@ -9414,6 +10124,10 @@ MonoBehaviour:
   _characterController: {fileID: 1238819758}
   _playerGravity: 15
   _twistCooldown: 2
+  _jumpClip: {fileID: 8300000, guid: 693684fba1569cc7db899d590e4069e0, type: 3}
+  _hurtClip: {fileID: 8300000, guid: 0f11da0a656435d8db31fcd25563d013, type: 3}
+  _twistClip: {fileID: 8300000, guid: c604660cbd3d481f5b3c953b4f73ddde, type: 3}
+  _audioSource: {fileID: 1238819766}
 --- !u!136 &1238819764
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -9458,6 +10172,102 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 0.5, z: 2}
   m_Center: {x: 0, y: 0.24, z: 0}
+--- !u!82 &1238819766
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1238819756}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!4 &1243455031 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 949f58848fab8794e90376d2669a0105,
@@ -9538,6 +10348,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Wall_FirstAge (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9a161a309cd58c4438823758ea5a3ba8,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -9720,6 +10535,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Resource_Rock_1 (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: cdeaf068380e14849aaddc2c516b35e6,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9787,6 +10607,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Mountain_Group_1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: cef808133d1ab0d459558c9bc0e6a0c7,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -9871,6 +10696,151 @@ Transform:
   - {fileID: 1778248149}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
+--- !u!1 &1316339202
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1316339203}
+  - component: {fileID: 1316339205}
+  - component: {fileID: 1316339204}
+  m_Layer: 0
+  m_Name: Audio Source (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1316339203
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1316339202}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.44, y: 3, z: 124.76}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1932343305}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1316339204
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1316339202}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c059238b3096ea826af5fbe3826f9559, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _audioClip: {fileID: 8300000, guid: 92fd543c354580031b89fb162ed068b3, type: 3}
+  _audioClipTwist: {fileID: 8300000, guid: 46b7c48aeab587fa5a99db746b6aa90b, type: 3}
+  _audioSource: {fileID: 1316339205}
+  cooldown: 3
+--- !u!82 &1316339205
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1316339202}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 0.542
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 7
+  Pan2D: 0
+  rolloffMode: 2
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0.058003023
+      value: 0.60035324
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: -1.1666666
+      outSlope: -1.1666666
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0.29722223
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1001 &1319649920
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9933,6 +10903,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Resource_Rock_2
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 03debba4b573f004388fb6cee82b2efd,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -10007,6 +10982,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Resource_PineTree (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 33bf1f9f8ed8bc149ba2cce15737e942,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -10087,6 +11067,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Mountain_Group_1 (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: cef808133d1ab0d459558c9bc0e6a0c7,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10106,7 +11091,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1350440715
 Transform:
@@ -10266,7 +11251,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1369335322
 Transform:
@@ -10355,6 +11340,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Resource_Tree1
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0b6f659efb65648468884e5ff242f1a1,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10422,6 +11412,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Mountain_Group_1 (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: cef808133d1ab0d459558c9bc0e6a0c7,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -10521,7 +11516,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!65 &1417829192
 BoxCollider:
@@ -10672,6 +11667,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Resource_Gold_1 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e6a6e255b729aaf4baa3a9748190f2cd,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10800,6 +11800,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Resource_PineTree_Group
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: c7a16dcdeb0174846ad6469d8ca11c2f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10909,7 +11914,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1478714951
 Transform:
@@ -11014,7 +12019,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1484024593
 Transform:
@@ -11164,6 +12169,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Storage_FirstAge_Level2
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 48c482040bc20994eb88d60fc13a1b40,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -11324,6 +12334,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Resource_Tree_Group
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 3b350168a46642b46bc5c3a1abea3c84,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11410,6 +12425,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Resource_Tree_Group_Cut
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 5fe86335fc23cdd46a175cef02aa5768,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11490,6 +12510,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Resource_PineTree (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 33bf1f9f8ed8bc149ba2cce15737e942,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11558,6 +12583,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Resource_PineTree (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 33bf1f9f8ed8bc149ba2cce15737e942,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11625,6 +12655,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Resource_PineTree (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 33bf1f9f8ed8bc149ba2cce15737e942,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -11844,6 +12879,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wall_FirstAge
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9a161a309cd58c4438823758ea5a3ba8,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11971,6 +13011,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Resource_PineTree_Group
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: c7a16dcdeb0174846ad6469d8ca11c2f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12044,6 +13089,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Resource_Rock_1 (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: cdeaf068380e14849aaddc2c516b35e6,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -12200,6 +13250,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Mountain_Group_1 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: cef808133d1ab0d459558c9bc0e6a0c7,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12295,7 +13350,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1670275242
 Transform:
@@ -12383,6 +13438,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Resource_Rock_1 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: cdeaf068380e14849aaddc2c516b35e6,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -12528,6 +13588,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wall_FirstAge (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9a161a309cd58c4438823758ea5a3ba8,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12639,6 +13704,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Mountain_Group_1 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: cef808133d1ab0d459558c9bc0e6a0c7,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12661,7 +13731,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1685526852
 Transform:
@@ -12766,7 +13836,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1687250788
 Transform:
@@ -12923,6 +13993,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Resource_Rock_1 (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: cdeaf068380e14849aaddc2c516b35e6,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12945,7 +14020,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1712190259
 Transform:
@@ -13096,6 +14171,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Resource_PineTree (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 33bf1f9f8ed8bc149ba2cce15737e942,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -13169,6 +14249,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Resource_Tree_Group
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 3b350168a46642b46bc5c3a1abea3c84,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -13291,6 +14376,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: WatchTower_FirstAge_Level2 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 949f58848fab8794e90376d2669a0105,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -13365,6 +14455,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Resource_Rock_1 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: cdeaf068380e14849aaddc2c516b35e6,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -13432,6 +14527,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Resource_Gold_1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e6a6e255b729aaf4baa3a9748190f2cd,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -13594,6 +14694,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Resource_Rock_1 (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: cdeaf068380e14849aaddc2c516b35e6,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -14025,6 +15130,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arrow_Side
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 282bbd2265b2dcc45b5da02fa61e3a0f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -14105,6 +15215,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Resource_PineTree (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 33bf1f9f8ed8bc149ba2cce15737e942,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -14172,6 +15287,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Mountain_Group_1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: cef808133d1ab0d459558c9bc0e6a0c7,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -14246,6 +15366,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Resource_PineTree (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 33bf1f9f8ed8bc149ba2cce15737e942,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -14396,6 +15521,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Mountain_Group_1 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: cef808133d1ab0d459558c9bc0e6a0c7,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -14407,6 +15537,40 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1914505427}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1932343304
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1932343305}
+  m_Layer: 0
+  m_Name: Audio
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1932343305
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1932343304}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 12, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 338986986}
+  - {fileID: 1316339203}
+  - {fileID: 723052685}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1932892372 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: c7a16dcdeb0174846ad6469d8ca11c2f,
@@ -14526,7 +15690,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1976298205
 Transform:
@@ -14609,6 +15773,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Resource_Tree_Group (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 3b350168a46642b46bc5c3a1abea3c84,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -14689,6 +15858,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Archery_FirstAge_Level1
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 4128673da32f0e5499335778cb7823c9,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -14717,7 +15891,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &2019934323
 Transform:
@@ -14874,6 +16048,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Resource_Tree_Group (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 3b350168a46642b46bc5c3a1abea3c84,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -14947,6 +16126,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Resource_Tree_Group (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 3b350168a46642b46bc5c3a1abea3c84,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -15064,6 +16248,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: WatchTower_FirstAge_Level2 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 949f58848fab8794e90376d2669a0105,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -15174,6 +16363,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Resource_PineTree_Group (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: c7a16dcdeb0174846ad6469d8ca11c2f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -15245,7 +16439,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &2106128288
 Transform:
@@ -15356,3 +16550,4 @@ SceneRoots:
   - {fileID: 505217863}
   - {fileID: 1976298205}
   - {fileID: 923152496}
+  - {fileID: 1932343305}
