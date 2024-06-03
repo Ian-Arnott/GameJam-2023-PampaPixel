@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class UI_ButtonsLogic : MonoBehaviour
 {
     public void LoadMenuScene() => SceneManager.LoadScene("Menu");
-    public void LoadLevelScene() => SceneManager.LoadScene("LevelLoader");
+    public void LoadLevelScene() => SceneManager.LoadScene("Level1Scene");
     public void LoadEndgameScene() => SceneManager.LoadScene("Endgame");
     public void LoadInfoScene() => Debug.Log("Information scene in development!!!");
     public void LoadSettingsScene() => Debug.Log("Settings scene in development!!!");

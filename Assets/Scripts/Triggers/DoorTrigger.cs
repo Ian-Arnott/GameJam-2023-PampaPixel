@@ -19,6 +19,7 @@ public class DoorTrigger : MonoBehaviour
         {
             door.transform.Rotate(new Vector3(0,0,Mathf.Pow(-1,i++)*90));
         }
+        GetComponent<BoxCollider>().isTrigger = true;
     }
 
 }
